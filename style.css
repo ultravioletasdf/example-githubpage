@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800;900&display=swap');
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+	min-height: 100vh;
+	position: absolute;
+	width: 100vw;
+	overflow-x: hidden;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+header {
+	padding: 50px;
+	background-color: rgb(217, 217, 217, 0.2);
+	border-bottom: rgb(0, 0, 0, 0.2) 1px solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	width: calc(100% - 100px);
+	backdrop-filter: blur(5px);
+}
+nav * + *:before {
+	content: ' | ';
+	font-weight: 300;
+	padding: 0 5px;
+}
+.name {
+	font-size: x-large;
+}
+
+.hero {
+	max-width: 50%;
+	position: relative;
+	left: 25%;
+	margin: 50px 0px 50px 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+}
+.button {
+	padding: 10px;
+	border-radius: 10px;
+	font-weight: 400;
+	width: fit-content;
+	transition: 0.5s;
+}
+.button:hover {
+	transform: scale(1.25);
+	transition: 0.5s;
+}
+.button-solid {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+.button-solid:hover {
+	background-color: #1f1f1f;
+	box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
+}
+.button-hollow {
+	background-color: transparent;
+	color: black;
+	border: solid 2px;
+	padding: 8px;
+}
+.button-hollow:hover {
+	background-color: #efefef;
+	box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
+}
+.button-3 {
+	background-color: transparent;
+	border: solid white 2px;
+	padding: 8px;
+	font-weight: 700;
+}
+
+.button-3:hover {
+	background-color: white;
+	color: black;
+	mix-blend-mode: screen;
+	transform: scale(1.25);
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+}
+.buttons :first-child {
+	margin-right: 10px;
+}
+.image-hero {
+	background-image: url('https://images.unsplash.com/photo-1541422348463-9bc715520974?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9ub2Nocm9tZXxlbnwwfHwwfHw%3D&auto=format');
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background-size: 100%;
+	transition: 1s;
+	isolation: isolate;
+}
+.image-hero:hover {
+	background-size: 150%;
+	transition: 1s;
+}
+footer {
+	width: calc(100% - 100px);
+	padding: 50px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	position: relative;
+	bottom: 0px;
+}
+footer > div {
+	display: grid;
+	justify-content: center;
+}
+.footer-section-content > .small {
+	font-size: 11px;
+}
+.footer-section-content > .big {
+	font-size: 12px;
+}
+@media screen and (min-width: 600px) {
+	footer {
+		position: absolute;
+	}
+}
